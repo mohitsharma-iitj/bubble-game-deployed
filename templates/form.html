@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Game Play Form
+	</title>
+
+	<!-- <style>
+		in style.css file		
+	</style> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style_form.css') }}" >
+</head>
+
+<body>
+	<h1>Mohit Sharma B21EE037</h1>
+
+	<!-- Create Form -->
+	<form action="{{ url_for('predict')}}" id="form" action="" method="post" onsubmit="">
+		
+		<div name="choice_ans">
+			
+			  <input type="radio" name="choice_radio" required="required" id="Yes" value="Yes">  Yes </input> <br>
+			  <input type="radio" name="choice_radio" required="required" id="No" value="No">  No  </input> <br>
+			  <input type="radio" name="choice_radio" required="required" id="NoAnswer" value="NoAnswer">	No Answer  </input> <br>
+			
+		</div>
+
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+	<br>
+   {{ prediction_text }}
+</body>
+
+</html>
