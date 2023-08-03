@@ -19,9 +19,9 @@ def predict():
     if(str(choice) == str('Yes')):
         return render_template('index.html')
     elif(choice == 'No'):
-        return render_template('form.html', prediction_text='Teri Ma Ki Chut')
+        return render_template('form.html', prediction_text='Press yes')
     else:
-        return render_template('form.html', prediction_text='Teri Ma Ki Chut ,dalle , bend ke lund')
+        return render_template('form.html', prediction_text='Please, press yes.')
 
     
 if __name__ == "__main__":
