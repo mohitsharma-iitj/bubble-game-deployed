@@ -220,7 +220,7 @@ class Particle {
     this.y = y;
     this.radius = radius;
     this.color = color;
-    this.velocity = velocity;
+    this.velocity = velocity/2;
     this.aplha = 1;
   }
 
