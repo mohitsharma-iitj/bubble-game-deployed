@@ -294,8 +294,8 @@ const spawnEnemy = () => {
 
   // Making velocity or speed of enemy by multipling chosen difficulty to radian
   const velocity = {
-    x: Math.cos(myAngle) * difficulty,
-    y: Math.sin(myAngle) * difficulty,
+    x: Math.cos(myAngle) * difficulty/2,
+    y: Math.sin(myAngle) * difficulty/2,
   };
 
   // Adding enemy to enemies array
