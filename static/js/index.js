@@ -37,20 +37,20 @@ document.querySelector("input").addEventListener("click", (e) => {
   const userValue = document.getElementById("difficulty").value;
 
   if (userValue === "Easy") {
-    setInterval(spawnEnemy, 2000);
-    return (difficulty = 5);
+    setInterval(spawnEnemy, 2100);
+    return (difficulty = 3);
   }
   if (userValue === "Medium") {
-    setInterval(spawnEnemy, 1400);
-    return (difficulty = 8);
+    setInterval(spawnEnemy, 1550);
+    return (difficulty = 5);
   }
   if (userValue === "Hard") {
-    setInterval(spawnEnemy, 1000);
-    return (difficulty = 10);
+    setInterval(spawnEnemy, 1100);
+    return (difficulty = 8);
   }
   if (userValue === "Insane") {
-    setInterval(spawnEnemy, 700);
-    return (difficulty = 12);
+    setInterval(spawnEnemy, 750);
+    return (difficulty = 10);
   }
 });
 
@@ -220,7 +220,7 @@ class Particle {
     this.y = y;
     this.radius = radius;
     this.color = color;
-    this.velocity = velocity/2;
+    this.velocity = velocity;
     this.aplha = 1;
   }
 
@@ -294,8 +294,8 @@ const spawnEnemy = () => {
 
   // Making velocity or speed of enemy by multipling chosen difficulty to radian
   const velocity = {
-    x: Math.cos(myAngle) * difficulty/2,
-    y: Math.sin(myAngle) * difficulty/2,
+    x: Math.cos(myAngle) * difficulty,
+    y: Math.sin(myAngle) * difficulty,
   };
 
   // Adding enemy to enemies array
